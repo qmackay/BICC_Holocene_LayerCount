@@ -1,0 +1,30 @@
+
+
+match = 'EDML-WDC';
+
+%shouldn't keep forever but delete all in matchfiles
+delete(fullfile('/Users/quinnmackay/Documents/GitHub/matchmaker/matchfiles/', ['*_match.mat']));
+
+% create full path and split the str
+tokens = strsplit(match, '-');
+core1 = tokens{1};
+core2 = tokens{2};
+path = ['/Users/quinnmackay/Documents/GitHub/BICC/Antarctic Chronology Accuracy Project/Plot_Sulfate/tiepoints/' match];
+
+% Read whitespace-delimited text file without variable names, skip header line
+core1_data = readtable(fullfile(path, [core1 '.txt']), 'FileType', 'text', 'Delimiter', '', 'ReadVariableNames', false, 'HeaderLines', 1);
+core2_data = readtable(fullfile(path, [core2 '.txt']), 'FileType', 'text', 'Delimiter', '', 'ReadVariableNames', false, 'HeaderLines', 1);
+
+% Append a second column of ones to each table
+n1 = height(core1_data);
+n2 = height(core2_data);
+core1_data.(sprintf('Var%d', width(core1_data)+1)) = ones(n1,1);
+core2_data.(sprintf('Var%d', width(core2_data)+1)) = ones(n2,1);
+
+core1_double = table2array(core1_data);
+core2_double = table2array(core2_data);
+
+mp = core1_double;
+save(fullfile('/Users/quinnmackay/Documents/GitHub/matchmaker/matchfiles/', [core1 '_match.mat']), 'mp')
+mp = core2_double;
+save(fullfile('/Users/quinnmackay/Documents/GitHub/matchmaker/matchfiles/', [core2 '_match.mat']), 'mp')
