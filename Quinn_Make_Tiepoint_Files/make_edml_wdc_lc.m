@@ -38,7 +38,7 @@ core1 = tokens{1};                   % char
 core2 = tokens{2};                   % char
 
 %% Build path (char, not string)
-base_path = '/Users/quinnmackay/Documents/GitHub/BICC/Antarctic Chronology Accuracy Project/Plot_Sulfate/tiepoints';
+base_path = '/Users/quinnmackay/Documents/GitHub/IceTiepoint_Analysis/Network Analysis/all_tiepoints';
 path = fullfile(base_path, char(match));
 
 %% Read text files
