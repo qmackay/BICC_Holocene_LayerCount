@@ -2,63 +2,15 @@
 %         1        2        3        4        5        6
 % Order : Core1    Core2    etc.
 
-files.core{1} = 'DF';
-files.datafile{1} = 'DF_data.mat';
-files.matchfile{1} = 'DF_match.mat';
-% optional, secondary mp file:
-% files.matchfile_secondary{1} = 'CORE1_core123match_secondary.mat';
-
-files.core{2} = 'WDC';
-files.datafile{2} = 'WDC_data.mat';
-files.matchfile{2} = 'WDC_match.mat';
+files.core{1} = 'WDC';
+files.datafile{1} = 'WDC_data.mat';
+files.matchfile{1} = 'WDC_match.mat';
 % optional, secondary mp file:
 % files.matchfile_secondary{2} = 'CORE2_core123match_secondary.mat';
 
-files.core{3} = 'EDML';
-files.datafile{3} = 'EDML_data.mat';
-files.matchfile{3} = 'EDML_match.mat';
-% optional, secondary mp file:
-% files.matchfile_secondary{2} = 'CORE2_core123match_secondary.mat';
-
-files.core{4} = 'EDC';
-files.datafile{4} = 'EDC_data.mat';
-files.matchfile{4} = 'EDC_match.mat';
-% optional, secondary mp file:
-% files.matchfile_secondary{2} = 'CORE2_core123match_secondary.mat';
-
-files.core{5} = 'TALDICE';
-files.datafile{5} = 'TALDICE_data.mat';
-files.matchfile{5} = 'TALDICE_match.mat';
-% optional, secondary mp file:
-% files.matchfile_secondary{2} = 'CORE2_core123match_secondary.mat';
-
-files.core{6} = 'GRIP';
-files.datafile{6} = 'GRIP_data.mat';
-files.matchfile{6} = 'GRIP_match.mat';
-% optional, secondary mp file:
-% files.matchfile_secondary{2} = 'CORE2_core123match_secondary.mat';
-
-files.core{7} = 'GISP2';
-files.datafile{7} = 'GISP2_data.mat';
-files.matchfile{7} = 'GISP2_match.mat';
-% optional, secondary mp file:
-% files.matchfile_secondary{2} = 'CORE2_core123match_secondary.mat';
-
-files.core{8} = 'NEEM';
-files.datafile{8} = 'NEEM_data.mat';
-files.matchfile{8} = 'NEEM_match.mat';
-% optional, secondary mp file:
-% files.matchfile_secondary{2} = 'CORE2_core123match_secondary.mat';
-
-files.core{9} = 'NG1';
-files.datafile{9} = 'NG1_data.mat';
-files.matchfile{9} = 'NG1_match.mat';
-% optional, secondary mp file:
-% files.matchfile_secondary{2} = 'CORE2_core123match_secondary.mat';
-
-files.core{10} = 'NG2';
-files.datafile{10} = 'NG2_data.mat';
-files.matchfile{10} = 'NG2_match.mat';
+files.core{2} = 'EDML';
+files.datafile{2} = 'EDML_data.mat';
+files.matchfile{2} = 'EDML_match.mat';
 % optional, secondary mp file:
 % files.matchfile_secondary{2} = 'CORE2_core123match_secondary.mat';
 

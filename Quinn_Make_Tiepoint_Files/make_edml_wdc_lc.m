@@ -29,7 +29,7 @@ disp(match)
 
 %% Delete old matchfiles
 delete(fullfile( ...
-    '/Users/quinnmackay/Documents/GitHub/matchmaker/matchfiles', ...
+    'matchfiles', ...
     '*.mat'));
 
 %% Split match into cores (force char for {} indexing)
@@ -38,7 +38,7 @@ core1 = tokens{1};                   % char
 core2 = tokens{2};                   % char
 
 %% Build path (char, not string)
-base_path = '/Users/quinnmackay/Documents/GitHub/IceTiepoint_Analysis/Network Analysis/all_tiepoints';
+base_path = 'data/tiepoints/ready_for_matchmaker';
 path = fullfile(base_path, char(match));
 
 %% Read text files
@@ -67,8 +67,8 @@ core2_double = table2array(core2_data);
 %% Append additional layer-count files with specified rules
 
 % Paths to additional files
-edml_lc_file = '/Users/quinnmackay/Documents/GitHub/BICC/Holcene Revision Work/Synchronizing/edml_lc.txt';
-wd_lc_file   = '/Users/quinnmackay/Documents/GitHub/BICC/Holcene Revision Work/Synchronizing/wd_lc.txt';
+edml_lc_file = 'data/raw_lcs/edml_lc.txt';
+wd_lc_file   = 'data/raw_lcs/wd_lc.txt';
 
 % Read edml_lc (columns: Depth, Count, Age...) and map Count->layer value.
 if isfile(edml_lc_file)
@@ -114,10 +114,10 @@ end
 %% Save matchfiles
 mp = core1_double;
 save(fullfile( ...
-    '/Users/quinnmackay/Documents/GitHub/matchmaker/matchfiles', ...
+    'matchfiles', ...
     [core1 '_match.mat']), 'mp');
 
 mp = core2_double;
 save(fullfile( ...
-    '/Users/quinnmackay/Documents/GitHub/matchmaker/matchfiles', ...
+    'matchfiles', ...
     [core2 '_match.mat']), 'mp');
