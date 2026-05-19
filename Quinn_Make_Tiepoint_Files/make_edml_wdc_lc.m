@@ -67,8 +67,8 @@ core2_double = table2array(core2_data);
 %% Append additional layer-count files with specified rules
 
 % Paths to additional files
-edml_lc_file = 'data/raw_lcs/edml_lc.txt';
-wd_lc_file   = 'data/raw_lcs/wd_lc.txt';
+edml_lc_file = 'data/raw_lcs/Counts for Matchmaker/EDML_LayerCount.txt';
+wd_lc_file   = 'data/raw_lcs/Counts for Matchmaker/WDC_LayerCount.txt';
 
 % Read edml_lc (columns: Depth, Count, Age...) and map Count->layer value.
 if isfile(edml_lc_file)
